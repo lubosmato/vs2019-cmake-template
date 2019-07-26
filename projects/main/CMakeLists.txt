@@ -17,7 +17,7 @@ target_link_libraries(${EXE_NAME} PRIVATE ${Boost_LIBRARIES})
 target_include_directories(${EXE_NAME} PRIVATE ${Boost_INCLUDE_DIRS})
 
 # OpenCV
-find_package(OpenCV REQUIRED)
+find_package(OpenCV 3.4.3 EXACT REQUIRED)
 target_include_directories(${EXE_NAME} PRIVATE ${OpenCV_INCLUDE_DIRS})
 target_link_libraries(${EXE_NAME} PRIVATE ${OpenCV_LIBS})
 
