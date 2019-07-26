@@ -1,12 +1,14 @@
 ﻿#include <iostream>
+
 #include <boost/asio.hpp>
+
 #include <opencv2/core.hpp>
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui.hpp>
 
-#include "huge_library/greeting.hpp"
-#include "dll_library/greeting.hpp"
-#include "external_library/library.hpp"
+#include <huge_library/greeting.hpp>
+#include <dll_library/greeting.hpp>
+#include <external_library/library.hpp>
 
 void my_task()
 {

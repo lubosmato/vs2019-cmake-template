@@ -13,8 +13,8 @@ target_include_directories(${EXE_NAME} PRIVATE ./include/)
 # Add external libraries
 # Boost
 find_package(Boost 1.70 EXACT REQUIRED COMPONENTS date_time)
-target_link_libraries(${EXE_NAME} PRIVATE ${Boost_LIBRARIES})
 target_include_directories(${EXE_NAME} PRIVATE ${Boost_INCLUDE_DIRS})
+target_link_libraries(${EXE_NAME} PRIVATE ${Boost_LIBRARIES})
 
 # OpenCV
 find_package(OpenCV 3.4.3 EXACT REQUIRED)
