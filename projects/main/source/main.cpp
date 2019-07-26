@@ -6,6 +6,7 @@
 
 #include "huge_library/greeting.hpp"
 #include "dll_library/greeting.hpp"
+#include "external_library/library.hpp"
 
 void my_task()
 {
@@ -16,6 +17,7 @@ int main()
 {
 	library_func();
 	dll_func();
+	hello();
 
 	boost::asio::io_context io_context;
 	boost::asio::post(io_context, my_task);

@@ -24,3 +24,4 @@ target_link_libraries(${EXE_NAME} PRIVATE ${OpenCV_LIBS})
 # Add libraries
 target_link_libraries(${EXE_NAME} PRIVATE huge_library)
 target_link_libraries(${EXE_NAME} PRIVATE dll_library)
+target_link_libraries(${EXE_NAME} PRIVATE external_library)
