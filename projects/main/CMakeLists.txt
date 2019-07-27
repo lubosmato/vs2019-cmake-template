@@ -6,9 +6,9 @@ set(Boost_USE_STATIC_LIBS ON)
 set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME OFF)
 
-file(GLOB SOURCE_FILES ./source/*)
+file(GLOB SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/source/*)
 add_executable(${EXE_NAME} ${SOURCE_FILES})
-target_include_directories(${EXE_NAME} PRIVATE ./include/)
+target_include_directories(${EXE_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include/)
 
 # Add external libraries
 # Boost

@@ -10,4 +10,4 @@ else()
 	set_target_properties(${LIB_NAME} PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/lib/library.lib)
 endif()
 
-target_include_directories(${LIB_NAME} INTERFACE ./include/)
+target_include_directories(${LIB_NAME} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include/)
