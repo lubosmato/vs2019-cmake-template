@@ -9,6 +9,7 @@
 #include <huge_library/greeting.hpp>
 #include <dll_library/greeting.hpp>
 #include <external_library/library.hpp>
+#include <qt_gui/gui.hpp>
 
 void my_task()
 {
@@ -36,6 +37,8 @@ int main()
 	cv::imshow("Image", image);
 	cv::waitKey();
 	cv::destroyAllWindows();
+
+	show_window();
 
 	return 0;
 }
