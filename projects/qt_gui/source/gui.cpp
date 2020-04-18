@@ -14,4 +14,3 @@ void show_window()
 
 	app.exec();
 }
-  

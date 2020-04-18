@@ -7,20 +7,26 @@
 #include <opencv2/highgui.hpp>
 
 #include <huge_library/greeting.hpp>
+#include <huge_library2/greeting.hpp>
 #include <dll_library/greeting.hpp>
 #include <external_library/library.hpp>
 #include <qt_gui/gui.hpp>
 
+#include "main/test.hpp"
+
 void my_task()
 {
-	std::cout << "Hello there\n";
+	std::string_view test = "Hello there\n";
+	std::cout << test;
 }
 
 int main()
 {
 	library_func();
+	library_func2();
 	dll_func();
 	hello();
+	test();
 
 	boost::asio::io_context io_context;
 	boost::asio::post(io_context, my_task);
