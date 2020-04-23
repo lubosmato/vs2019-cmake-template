@@ -1,6 +1,7 @@
 # Visual Studio
 .vs/
 bin/
+lib/
 build/
 
 # Prerequisites
