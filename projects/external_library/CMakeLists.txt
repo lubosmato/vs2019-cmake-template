@@ -1,13 +1,13 @@
 ﻿cmake_minimum_required (VERSION 3.14)
 
-set(LIB_NAME external_library)
+get_filename_component(project_name ${CMAKE_CURRENT_SOURCE_DIR} NAME) # directory name is project name
 
-add_library(${LIB_NAME} STATIC IMPORTED GLOBAL)
+add_library(${project_name} STATIC IMPORTED GLOBAL)
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-	set_target_properties(${LIB_NAME} PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/lib/libraryd.lib)
+	set_target_properties(${project_name} PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/lib/libraryd.lib)
 else()
-	set_target_properties(${LIB_NAME} PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/lib/library.lib)
+	set_target_properties(${project_name} PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/lib/library.lib)
 endif()
 
-target_include_directories(${LIB_NAME} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include/)
+target_include_directories(${project_name} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include/)

@@ -1,7 +1,7 @@
 ﻿cmake_minimum_required (VERSION 3.14)
 
-set(LIB_NAME huge_library2)
+get_filename_component(project_name ${CMAKE_CURRENT_SOURCE_DIR} NAME) # directory name is project name
 
-file(GLOB SOURCE_FILES CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/source/*)
-add_library(${LIB_NAME} STATIC ${SOURCE_FILES})
-target_include_directories(${LIB_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include/)
+file(GLOB source_files CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/source/*)
+add_library(${project_name} STATIC ${source_files})
+target_include_directories(${project_name} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include/)

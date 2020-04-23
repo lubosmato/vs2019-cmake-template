@@ -1,0 +1,23 @@
+[requires]
+gtest/1.8.1
+boost/1.72.0
+qt/5.12.8@bincrafters/stable
+opencv/4.1.1@conan/stable
+libjpeg/9c
+harfbuzz/2.4.0@bincrafters/stable
+libtiff/4.0.9
+
+[options]
+opencv:contrib=True
+opencv:shared=True
+opencv:protobuf=False
+opencv:freetype=False
+opencv:tiff=True
+libtiff:shared=True
+
+[generators]
+cmake_multi
+
+[imports]
+bin, *.dll -> ../bin
+# lib, *.lib -> ../lib
