@@ -7,7 +7,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 
 include(${PROJECT_SOURCE_DIR}/build/conanbuildinfo_multi.cmake)
-conan_basic_setup()
+conan_basic_setup(TARGETS)
 
 # Add subdirectories in ./projects/
 file(GLOB project_folders CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/projects/*)
@@ -17,4 +17,4 @@ foreach(project_folder ${project_folders})
 	endif()
 endforeach()
 
-# add_subdirectory(tests) # TODO conan cmake_multi generator and gtest are not friends
+add_subdirectory(tests)
