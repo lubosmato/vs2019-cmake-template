@@ -5,4 +5,3 @@
 {
 	std::cout << "Hello from DLL library!\n";
 }
-  
