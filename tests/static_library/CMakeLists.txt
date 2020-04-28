@@ -6,7 +6,7 @@ set(test_name "test_${test_name}")
 file(GLOB testSourceFiles CONFIGURE_DEPENDS ${test_folder}/test_*)
 
 add_executable(${test_name} ${testSourceFiles})
-target_link_libraries(${test_name} CONAN_PKG::gtest huge_library)
+target_link_libraries(${test_name} CONAN_PKG::gtest static_library)
 
 add_test(
 	NAME ${test_name}

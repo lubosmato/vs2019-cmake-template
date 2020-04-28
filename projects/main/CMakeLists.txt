@@ -23,8 +23,7 @@ find_package(OpenCV REQUIRED)
 target_link_libraries(${projectName} PRIVATE ${OpenCV_LIBS})
 
 # Add libraries
-target_link_libraries(${projectName} PRIVATE huge_library2)
-target_link_libraries(${projectName} PRIVATE huge_library)
+target_link_libraries(${projectName} PRIVATE static_library)
 target_link_libraries(${projectName} PRIVATE dll_library)
-target_link_libraries(${projectName} PRIVATE external_library)
+target_link_libraries(${projectName} PRIVATE static_external_library)
 target_link_libraries(${projectName} PRIVATE qt_gui)

@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <string>
 
-#include "huge_library/greeting.hpp"
+#include "static_library/greeting.hpp"
 #include "mock_foo.hpp"
 
 using namespace testing;
