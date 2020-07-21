@@ -2,7 +2,10 @@
 
 get_filename_component(projectName ${CMAKE_CURRENT_SOURCE_DIR} NAME) # directory name is project name
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
+add_compile_options("/std:c++latest")
+add_compile_options("/await")
+add_compile_options("/experimental:module")
 
 generate_product_version(productVersionFiles
     NAME main

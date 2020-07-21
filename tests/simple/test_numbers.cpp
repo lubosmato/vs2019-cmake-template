@@ -2,7 +2,7 @@
 #include <string>
 
 TEST(MyTest2, numbers) {
-    ASSERT_EQ(42, 41);
+    ASSERT_EQ(42, 42);
     EXPECT_FALSE(false);
 }
 

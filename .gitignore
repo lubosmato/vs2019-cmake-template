@@ -3,6 +3,8 @@
 bin/
 lib/
 build/
+VersionInfo.h
+VersionResource.rc
 
 # Prerequisites
 *.d
