@@ -6,6 +6,7 @@ opencv/4.1.1@conan/stable
 libjpeg/9c
 harfbuzz/2.4.0@bincrafters/stable
 libtiff/4.0.9
+di/1.2.0
 
 [options]
 opencv:contrib=True

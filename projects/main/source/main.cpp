@@ -14,6 +14,7 @@
 #include <qt_gui/gui.hpp>
 
 #include "main/greeter.hpp"
+#include "di_main/app.hpp"
 
 using namespace std::experimental;
 
@@ -79,6 +80,10 @@ void coroutines()
 
 int main()
 {
+    auto diApp = std::make_shared<App>();
+    diApp->run();
+    return 0;
+
     spaceship();
     designated_init();
     coroutines();
