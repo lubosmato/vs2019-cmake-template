@@ -19,11 +19,13 @@ target_include_directories(${projectName} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/in
 
 # Add external libraries
 # Boost
-target_link_libraries(${projectName} PRIVATE CONAN_PKG::boost)
+find_package(Boost 1.73 REQUIRED)
+target_link_libraries(${projectName} PRIVATE Boost::boost Boost::system Boost::thread)
 
 # OpenCV
-find_package(OpenCV REQUIRED)
-target_link_libraries(${projectName} PRIVATE ${OpenCV_LIBS})
+# TODO fix it
+# find_package(OpenCV REQUIRED COMPONENTS core imgproc highgui)
+# target_link_libraries(${projectName} PRIVATE opencv::opencv)
 
 # Add libraries
 target_link_libraries(${projectName} PRIVATE static_library)

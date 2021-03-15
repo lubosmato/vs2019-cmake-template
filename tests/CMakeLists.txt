@@ -2,8 +2,6 @@
 
 project("tests")
 
-enable_testing()
-
 # Add subdirectories in /tests/
 file(GLOB test_folders CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/*)
 foreach(test_folder ${test_folders})

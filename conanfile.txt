@@ -2,22 +2,21 @@
 gtest/1.8.1
 boost/1.73.0
 qt/5.12.8@bincrafters/stable
-opencv/4.1.1@conan/stable
+opencv/4.5.1
 libjpeg/9c
-harfbuzz/2.4.0@bincrafters/stable
-libtiff/4.0.9
+harfbuzz/2.7.4
+libtiff/4.2.0
+freetype/2.10.4
 
 [options]
 opencv:contrib=True
 opencv:shared=True
-opencv:protobuf=False
-opencv:freetype=False
-opencv:tiff=True
+opencv:with_tiff=True
 libtiff:shared=True
 freetype:shared=True
 
 [generators]
-cmake_multi
+cmake_find_package_multi
 
 [imports]
 bin, *.dll -> ../bin

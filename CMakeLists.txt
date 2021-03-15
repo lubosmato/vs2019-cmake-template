@@ -2,15 +2,16 @@
 
 project("template")
 
+enable_testing()
+
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+list(APPEND CMAKE_PREFIX_PATH "${CMAKE_CURRENT_SOURCE_DIR}/build")
+
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 include(generate_product_version)
-
-include(${PROJECT_SOURCE_DIR}/build/conanbuildinfo_multi.cmake)
-conan_basic_setup(TARGETS)
 
 # Add subdirectories in ./projects/
 file(GLOB project_folders CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/projects/*)
